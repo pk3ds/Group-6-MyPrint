@@ -1,0 +1,8 @@
+.backgroundImage{
+	background-image: url("../img/blueBackground.jpg");
+}
+.headerImage{
+	background-image: url("../img/background.jpg");
+}
+.details{
+	float:left;padding:30px;margin:30px;width:300px;text-align:center;border: 5px solid powderblue;
