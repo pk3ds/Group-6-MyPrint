@@ -1,0 +1,20 @@
+.text-left{
+	text-left;
+}
+.backgroundImage{
+	background-image: url("../img/blueBackground.jpg");
+}
+.headerImage{
+	background-image: url("../img/background.jpg");
+}
+#back {
+	float:right;
+}
+
+#download {
+	float:left;
+}
+
+#reply {
+	text-align:center;
+}

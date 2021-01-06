@@ -1,0 +1,26 @@
+table thead .bg-light {
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+#roundedBottomLeft {
+	border-bottom-left-radius: 20px;
+}
+
+#roundedBottomRight {
+	border-bottom-right-radius: 20px;
+}
+
+.roundedContainer {
+	border-radius: 20px;
+}
+
+.smallHeader {
+	background-color: #85d0e7;
+	padding: 1rem 0.75rem 1rem 0.75rem;
+	font-weight: bold;
+	border-radius: 20px;
+	box-shadow: -5px -10px 20px #28a2c5 inset;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0e3945;
+}

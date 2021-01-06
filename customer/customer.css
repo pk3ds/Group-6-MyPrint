@@ -1,0 +1,44 @@
+.headerImage{
+	background-image: url("../img/background.jpg");
+}
+.backgroundImage{
+	background-image: url("../img/blueBackground.jpg");
+}
+.footerLink{
+	color:black;
+	link {
+		text-decoration: none;
+	}
+}
+.productImageContainer {
+	position: relative;
+	width: 95%;
+}
+.productImage {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+}
+.textArea {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.productImageContainer:hover .productImage {
+	opacity: 0.5;
+}
+.productImageContainer:hover .textArea {
+	opacity: 1;
+}
+.text {
+	background-color: #17A2B8;
+	color: white;
+	font-size: 18px;
+	padding: 16px 32px;
+}
