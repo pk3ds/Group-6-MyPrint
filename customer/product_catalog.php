@@ -379,6 +379,15 @@
 						<img src="../img/upload.jpg" class="img-fluid" alt="Upload icon"/> Upload your file for printing.
 					</a>
                     <hr class="d-block" />
+					<!--Share button -->
+					<h4>Share this product!</h4>
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="http://medanilmu.ddns.net/website/customer/product_catalog.php?ID=<?php echo $ID ?>" data-a2a-title="Hey! I just found this amazing printing website. Check out their products!">
+					<a class="a2a_button_facebook"></a>
+					<a class="a2a_button_twitter"></a>
+					<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+					</div>
+					<script async src="https://static.addtoany.com/menu/page.js"></script>
+					<hr class="d-block" />
                 </div>
 				<!--End-->
             </div>
