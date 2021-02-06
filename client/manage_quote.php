@@ -88,7 +88,11 @@ if (mysqli_num_rows($result) > 0)
 	 <form action='manage_quote2.php?ID="<?php echo $row["ID"]; ?>"' method="post">
 	 <input type="hidden" name="ID" value="<?php echo $row["ID"];  ?>">
 	 <td> <input type="submit" value="View Details"></td>   <!--button for manage_quote page-->
-	 <td><a href=<?php echo "'download.php?ID=".$row['ID']."'"; ?>></a></td>
+	 <a href=<?php echo "'download.php?ID=".$row['ID']."'"; ?>></a></td>
+	 </form>
+	 <form method="post" action="deletequote.php">
+	 <input type="hidden" name="quoteid" value="<?php echo $row["ID"];  ?>">
+	 <td><button name="deletequote" class="btn"><i class="fa fa-trash"></i></button></td>
 	 </form>
 	 </tr>
 	 <?php endwhile; 
