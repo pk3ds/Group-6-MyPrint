@@ -2,7 +2,7 @@
 	<!--Bootstrap class for display information at the center for extra attention, also a header-->
 	<div class=" jumbotron text-center mb-0 d-none d-sm-block headerImage" >
 		<h1>Digital Printing Shop</h1>
-		<p>Print Anywhere, Anytime!</p> 
+		<p>Print Anywhere, Anytime!</p>
 	</div>
 
 	<!--Website navigation bar-->
@@ -63,6 +63,9 @@
 							<input id="password" class="form-control login" type="password" name="password" placeholder="Password.."/>
 							<input class="btn btn-info" style="margin-top: 5px;" type="submit" name="submit" value="login" />
 						  </form>
+							<form class="form-horizontal" action="../account/register.php" method="get">
+								<input class="btn btn-info" style="margin-top: 5px;" type="submit" name="submit" value="Register" />
+							</form>
 						  </div>
 					  </li>
 					<!--<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login</a>
