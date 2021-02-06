@@ -7,6 +7,7 @@
 	
 	$sql = "SELECT * FROM announcement WHERE Status = 'Accepted' AND CURRENT_TIMESTAMP < End_Date ";
 	$result = mysqli_query($conn, $sql);
+	$isBannerActive = false;
 
 	if (mysqli_num_rows($result) > 0)
 		
@@ -39,7 +40,7 @@
 			
 				<?php while($row = mysqli_fetch_assoc($result)):?>
 				
-				<div class="carousel-item active">
+				<div class="carousel-item <?php if($isBannerActive == false){ echo "active"; $isBannerActive = true;} ?>">
 					<!--Banner is a visible on all screen size device.-->
 					<img class="d-block w-100" src="../file_store/announcement/<?php echo $row["File"]; ?>" alt="banner">
 				</div>
