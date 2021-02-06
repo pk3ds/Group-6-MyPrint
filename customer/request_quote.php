@@ -190,8 +190,10 @@
 						</div>
 						
 						<div class="container-fluid">
-							<input type="submit" name="submit" class="btn btn-primary float-right btn-sm">
-							<a href="home.html" class="btn btn-info btn-sm float-left" role="button">Back</a>
+							<div style="padding-left:1540px">
+							<input type="submit" name="submit" class="btn btn-primary float-center btn-sm">
+							<a href="home.php" class="btn btn-info btn-sm float-center" role="button">Back</a>
+							</div>
 						</div>
 					</div>
 					
