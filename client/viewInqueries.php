@@ -47,6 +47,7 @@
 	 <th>Phone Number</th>
 	 <th>Message</th>
 	 <th>Email</th>
+	 <th>Delete Inquiry</th>
 	 </tr>
 	<?php while($row = mysqli_fetch_assoc($result)):?>
 	 
@@ -55,6 +56,10 @@
 	<td><?php echo $row["Phone"];?> </td>
 	<td><?php echo $row["Message"];?> </td>
 	<td><button onclick="window.location.href = 'mailto:<?php echo $row["Email"];?>';">Reply</button> </td>
+	<form method="post" action="deleteinquiry.php">
+	<input type="hidden" name="inquiryid" value="<?php echo $row["ID"];  ?>">
+	<td> <input type="submit" value="Delete" name="deleteinquiry"></td>
+	</form>
 
 	</tr>
 	<?php endwhile;
