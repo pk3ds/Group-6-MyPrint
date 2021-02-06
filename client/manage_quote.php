@@ -53,6 +53,7 @@ if (mysqli_num_rows($result) > 0)
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="client.css"/>
 	<link rel="icon" href="../img/logo.jpg" type="image/icon">
 </head>
@@ -78,17 +79,21 @@ if (mysqli_num_rows($result) > 0)
 	 <th>Quote ID</th>
 	 <th>Quote received date</th>
 	 <th>Details</th>
+	 <th>Delete Quote</th>
 	 </tr>
 	 
 	 <?php while($row = mysqli_fetch_assoc($result)):?>
-	 
-	 <tr>
+	 <a href=<?php echo "'download.php?ID=".$row['ID']."'"; ?>></a>
+	<tr>
 	 <td><?php echo $row["ID"]; ?></td>
 	 <td><?php echo $row["Date"]; ?></td>
 	 <form action='manage_quote2.php?ID="<?php echo $row["ID"]; ?>"' method="post">
 	 <input type="hidden" name="ID" value="<?php echo $row["ID"];  ?>">
 	 <td> <input type="submit" value="View Details"></td>   <!--button for manage_quote page-->
-	 <td><a href=<?php echo "'download.php?ID=".$row['ID']."'"; ?>></a></td>
+	 </form>
+	 <form method="post" action="deletequote.php">
+	 <input type="hidden" name="quoteid" value="<?php echo $row["ID"];  ?>">
+	 <td> <input type="submit" value="Delete" name="deletequote"></td>
 	 </form>
 	 </tr>
 	 <?php endwhile; 
