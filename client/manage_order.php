@@ -30,52 +30,40 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+	<link rel="stylsheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="client.css">
 	<link rel="stylesheet" type="text/css" href="manage_customer.css">
 	<link rel="icon" href="../img/logo.jpg" type="image/icon">
 </head>
 <script type="text/javascript" charset="utf-8" language="javascript" src="../../upload_download/js/jquery.dataTables.js"></script>
 <script type="text/javascript" charset="utf-8" language="javascript" src="../../upload_download/js/DT_bootstrap.js"></script>
+<script type="text/javascript">
+	$(document).ready( function () {
+		$('#myTable').DataTable();
+	} );
+</script>
 <body>
 <?php include 'include/header.html';?>
-
-	<!--Search button for items-->
-	<div class="container">
-	<!--right-alligned-->
-		<br>
-		<div class="float-right">
-					<div class="col-10">
-						<form action="" method="POST">
-							<input class="form-control border-secondary py-2" type="text" name="search" value="search...">
-							<div class="input-group-append">
-								<button class="btn btn-outline-secondary" href="manage_order.php?displaySearch=true" type="submit" name="submit"><img src="search.png" style="height:20px">
-								<i class="fa fa-search"></i>
-								</button>
-							</div>
-						</form>
-					</div>
-		</div>
-	</div>
-	<br/><br/>
 	
 	<br/><br/>
 	<!--Items details with customers name and ID-->
 	<div class="container pt-2">
 	<!--responsive table that can fit into any screen size-->
 		<div class="table-responsive-sm-6">
-			<table class="table table-striped" id="example">
+			<table class="table table-striped" id="myTable">
 				<thead>
 				<tr>
 					<th>Name</th>
-					<th><a href="manage_order.php?sortD=true">Date</a><img src="../img/sort.png" alt="sort" class="imageSpacing1"></th>
+					<th>Date</th>
 					<th>Order</th>
 					<th>Item</th>
-					<th><a href="manage_order.php?sortS=true">Status</a><img src="../img/sort.png" alt="sort" class="imageSpacing1"></th>
-					<th><a href="manage_order.php?sortP=true">Payment_Status</a><img src="../img/sort.png" alt="sort" class="imageSpacing1"></th>
-					<th><a href="manage_order.php?sortT=true">Total</a><img src="../img/sort.png" alt="sort" class="imageSpacing1"></th>
+					<th>Status</th>
+					<th>Payment_Status</th>
+					<th>Total</th>
 				</tr>
 				</thead>
-				<tbody id="myTable">
+				<tbody>
 				<div id="content">
 						<?php
 						//connect to database
