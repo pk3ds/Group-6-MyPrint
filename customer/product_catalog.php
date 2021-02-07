@@ -364,7 +364,13 @@
 									total *= 1.20;
 								break;
 						}
-						document.getElementById("displayPrice").innerHTML = "RM   " + total.toFixed(2);
+						
+						var quantityCheckValue = parseInt(document.getElementById("quantity").value);
+						if(quantityCheckValue<10){
+							document.getElementById("displayPrice").innerHTML = "Minimum Quantity Value is 10";
+						}else{
+							document.getElementById("displayPrice").innerHTML = "RM   " + total.toFixed(2);
+						}
 					}
 					</script>
 					
